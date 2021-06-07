@@ -1,0 +1,4 @@
+chaincodes/token/node_modules
+chaincodes/token/coverage
+chaincodes/token/.nyc_output
+fabrica-target
