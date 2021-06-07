@@ -23,3 +23,13 @@ fabrica chaincode upgrade [chaincode-name] version
 ```
 fabrica prune
 ```
+## Testing
+6. Register
+```
+docker exec -it cli.org1.com peer chaincode invoke -n chaincode1 -C my-channel1 --peerAddresses peer0.org1.com:7060 -c '{"Args":["1", "Aluno - Luis Henrique"], "Function":"put"}'
+```
+
+7. Query
+```
+docker exec -it cli.org1.com peer chaincode query -n chaincode1 -C my-channel1 --peerAddresses peer0.org1.com:7060 -c '{"Args":["1"], "Function":"get"}'
+```
