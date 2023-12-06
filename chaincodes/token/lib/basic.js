@@ -10,7 +10,7 @@ class Basic extends Contract {
     // function that will be invoked on chaincode instantiation
   }
 
-  async put(ctx, key, value) {
+  async put(ctx, key = Date.now(), value = 'default') {
     await ctx.stub.putState(key, Buffer.from(value));
     return { success: 'OK' };
   }
